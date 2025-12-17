@@ -1,20 +1,65 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Ray Controller Macro - دليل التشغيل والتثبيت
 
-# Run and deploy your AI Studio app
+هذا الملف يشرح كيفية تشغيل برنامج **Ray Controller Macro** على جهاز الكمبيوتر وكيفية تحويله إلى ملف تنفيذي (.exe).
 
-This contains everything you need to run your app locally.
+## 1. المتطلبات الأساسية (مهم جداً)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1l4HfyYrKH3cxPZ2KClfm9lp29xIJ_kuE
+قبل البدء، يجب أن يكون لديك برنامج **Node.js** مثبتاً على جهازك. هو المحرك الذي يجعل البرنامج يعمل.
 
-## Run Locally
+1. اذهب إلى الموقع الرسمي: [https://nodejs.org](https://nodejs.org)
+2. حمل النسخة الموصى بها (LTS Version).
+3. قم بتثبيته مثل أي برنامج عادي (Next, Next, Finish).
 
-**Prerequisites:**  Node.js
+---
 
+## 2. تثبيت المكتبات (مرة واحدة فقط)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+بعد تحميل ملفات المشروع في مجلد على جهازك:
+
+1. افتح المجلد الذي يحتوي على الملفات.
+2. اضغط بزر الفأرة الأيمن في مساحة فارغة داخل المجلد واختر **Open in Terminal** أو اكتب `cmd` في شريط العنوان بالأعلى واضغط Enter.
+3. ستظهر لك شاشة سوداء (الطرفية)، اكتب الأمر التالي واضغط Enter:
+
+```bash
+npm install
+```
+
+انتظر قليلاً حتى ينتهي التحميل (سيقوم بإنشاء مجلد اسمه `node_modules`).
+
+---
+
+## 3. تجربة البرنامج (وضع المطور)
+
+لتشغيل البرنامج وتجربته دون استخراج ملف exe، اكتب الأمر التالي في الطرفية:
+
+```bash
+npm start
+```
+
+سيفتح البرنامج في نافذة جديدة.
+
+---
+
+## 4. استخراج ملف EXE (البرنامج النهائي)
+
+لتحويل المشروع إلى ملف **Setup.exe** جاهز للنشر والاستخدام:
+
+1. في نفس الشاشة السوداء (الطرفية)، اكتب الأمر التالي:
+
+```bash
+npm run dist
+```
+
+2. انتظر دقيقة أو دقيقتين حتى تنتهي العملية.
+3. عند الانتهاء، ستجد مجلد جديد ظهر اسمه **`dist`**.
+4. افتح مجلد `dist` وستجد بداخله ملف التثبيت باسم `Ray Macro Setup 1.0.0.exe`.
+
+---
+
+## ملاحظات هامة
+
+*   **حماية البرنامج**: الكود يحتوي على إعدادات أساسية لـ Electron. إذا كنت تريد إخفاء الكود المصدري تماماً، ستحتاج لاستخدام أدوات تشفير إضافية مثل `bytenode`.
+*   **توصيل اليد**: تأكد من توصيل يد التحكم (PS4/PS5/Xbox) قبل تشغيل البرنامج لضمان التعرف عليها فوراً.
+*   **حقوق الملكية**: هذا المشروع خاص بـ 0.tk، يرجى عدم مشاركة الكود المصدري.
+
+Developed by 0.tk
