@@ -1,0 +1,5 @@
+{
+  "name": "Ray controller macro",
+  "description": "A high-performance controller macro UI for Fortnite, featuring real-time gamepad detection, edit/reset logic configuration, and a stealth dark-themed interface.",
+  "requestFramePermissions": []
+}
